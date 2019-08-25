@@ -11,7 +11,7 @@ fi
 # User specific aliases and functions
 alias pbcopy="xsel --clipboard --input"
 alias pbpaste="xsel --clipboard --output"
-alias python="/usr/bin/python3.6" >> ~/.bashrc
-alias pip="/usr/local/bin/pip" >> ~/.bashrc
+alias python="/usr/bin/python3.6"
+alias pip="/usr/local/bin/pip"
 PS1="[\[\e[0;37m\]\u\[\e[5;36m\]@$(hostname) \[\e[1;35m\]\w\[\e[m\]]$"
 LANG=ja_JP.utf8
