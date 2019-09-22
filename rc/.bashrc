@@ -11,5 +11,5 @@ fi
 # User specific aliases and functions
 alias pbcopy="xsel --clipboard --input"
 alias pbpaste="xsel --clipboard --output"
-PS1="[\[\e[0;37m\]\u\[\e[5;36m\]@$(hostname) \[\e[1;35m\]\w\[\e[m\]]$"
+PS1="[\[\e[0;37m\]\u\[\e[5;36m\]@\H \[\e[0;33m\](\d \t) \[\e[1;35m\]\w\[\e[m\]]$"
 LANG=ja_JP.utf8
