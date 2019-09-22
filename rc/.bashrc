@@ -11,5 +11,26 @@ fi
 # User specific aliases and functions
 alias pbcopy="xsel --clipboard --input"
 alias pbpaste="xsel --clipboard --output"
-PS1="[\[\e[0;37m\]\u\[\e[5;36m\]@\H \[\e[0;33m\](\d \t) \[\e[1;35m\]\w\[\e[m\]]$"
+HEART=$(echo -ne $(cat <<___HEART___ | shuf -n 1 
+\U2764
+\U1F499
+\U1F49A
+\U1F49B
+\U1F9E1
+\U1F49C
+\U1F5A4
+\U1F498
+\U1F493
+\U1F494
+\U1F495
+\U1F496
+\U1F497
+\U1F49D
+\U1F49E
+\U1F49F
+\U2763
+\U2665
+___HEART___
+))
+PS1="[\[\e[0;37m\]\u\[\e[5;36m\]$HEART\H \[\e[0;33m\](\d \t) \[\e[1;35m\]\w\[\e[m\]]$"
 LANG=ja_JP.utf8
