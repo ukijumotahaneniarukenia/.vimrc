@@ -7,7 +7,6 @@ XTerm*saveLines : 2000
 XTerm*cjkWidth : true
 XTerm*rightScrollBar : true
 XTerm*scrollBar : true
-xterm*faceName: MigMix 1M
 *background: #292929
 *foreground: #ffffff
 *color0: #333333
