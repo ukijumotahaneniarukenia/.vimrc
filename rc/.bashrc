@@ -34,9 +34,3 @@ ___HEART___
 ))
 PS1="[\[\e[0;37m\]\u\[\e[1;36m\]$HEART\H \[\e[0;33m\](\d \t) \[\e[1;35m\]\w\[\e[m\]]$"
 export LANG=ja_JP.utf8
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-export NO_AT_BRIDGE=1
-xset -r 49
-ibus-daemon -dxr
