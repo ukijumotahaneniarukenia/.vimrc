@@ -4,7 +4,8 @@ XTerm*faceName : 'Monospace'
 XTerm*forcePackedFont : false
 XTerm*faceSize : 12
 XTerm*saveLines : 2000
-XTerm*cjkWidth : true
+xterm*utf8: 1
+xterm*cjkWidth: true
 XTerm*rightScrollBar : true
 XTerm*scrollBar : true
 *background: #292929
