@@ -26,3 +26,6 @@ XTerm*scrollBar : true
 *color13: #ED69B8
 *color14: #69EDE1
 *color15: #CCCCCC
+
+! Cursor
+XTerm*VT100*cursorBlink: true
