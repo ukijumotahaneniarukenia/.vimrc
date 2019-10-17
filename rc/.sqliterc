@@ -1,6 +1,10 @@
-.explain on
 .mode column
-.width 0
 .headers on
+.width 0
 .timer on
-.nullvalue 💩
+.nullvalue "NULL"
+.prompt "sqlite>>>"
+.print "=================================================================="
+.shell echo -e "\\\\e[35m$(whoami)\\\\e[m@\\\\e[36m$(hostname)\\\\e[m \\\\e[33m$(date)\\\\e[m"
+.shell parallel echo -ne ::: \\\\U1F4A{{0..9},{A..f}} && echo
+.print "=================================================================="
