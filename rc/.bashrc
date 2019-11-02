@@ -39,3 +39,5 @@ alias perm=$HOME/script_scratch/perl/順列.sh
 alias circle=$HOME/script_scratch/perl/回転.sh
 alias expand=$HOME/script_scratch/awk/スペース区切り文字の行展開.sh
 alias incr=$HOME/script_scratch/yes/単一行の行複写.sh
+alias ahead=$HOME/script_scratch/sed/先頭に文字追加.sh
+alias atail=$HOME/script_scratch/sed/末尾に文字追加.sh
