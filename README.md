@@ -1,5 +1,7 @@
 # .vimrc
 
+https://cs.stanford.edu/people/miles/iso8859.html
+
 # 自作コマンドのエイリアス設定
 
 root実行
