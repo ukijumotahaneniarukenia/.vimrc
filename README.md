@@ -26,3 +26,17 @@ ln -fns /home/sqlite/script_scratch/shuf/ランダムな半角大文小文字取
 ln -fns /home/sqlite/script_scratch/shuf/ランダムな半角小文字取得.sh /usr/local/bin/randu
 ```
 
+こういうふうに使えて便利
+```
+[root💕ceacf3fb0808 (土 11月 02 18:13:51) /home/sqlite]$seq 10 | xargs -I@ randn @
+1
+41
+373
+5199
+93256
+040943
+2571073
+92202746
+769324748
+1083853596
+```
