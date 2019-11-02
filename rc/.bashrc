@@ -37,3 +37,4 @@ export LANG=ja_JP.utf8
 alias comb=$HOME/script_scratch/perl/組み合わせ.sh
 alias perm=$HOME/script_scratch/perl/順列.sh
 alias circle=$HOME/script_scratch/perl/回転.sh
+alias expand=$HOME/script_scratch/awk/スペース区切り文字の行展開.sh
