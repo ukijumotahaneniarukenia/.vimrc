@@ -34,3 +34,6 @@ ___HEART___
 ))
 PS1="[\[\e[0;37m\]\u\[\e[1;36m\]$HEART\H \[\e[0;33m\](\d \t) \[\e[1;35m\]\w\[\e[m\]]$"
 export LANG=ja_JP.utf8
+alias comb=/home/sqlite/script_scratch/perl/組み合わせ.sh
+alias perm=/home/sqlite/script_scratch/perl/順列.sh
+alias circle=/home/sqlite/script_scratch/perl/回転.sh
