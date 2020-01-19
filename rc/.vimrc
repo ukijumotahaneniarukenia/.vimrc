@@ -1,9 +1,5 @@
 scriptencoding utf-8 "Vim script内でマルチバイト文字を使う場合の設定
 runtime! util/*.vim
-runtime! colors/*.vim
-syntax on
-colorscheme molokai
-set t_Co=256
 
 "dein Scripts-----------------------------
 if &compatible
@@ -47,3 +43,7 @@ set runtimepath+=$HOME/.vim/bundle/nerdtree
 autocmd VimEnter * execute 'NERDTree'
 set helplang=ja
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+syntax on
+colorscheme molokai
+set t_Co=256
