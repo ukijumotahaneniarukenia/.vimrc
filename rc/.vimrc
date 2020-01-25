@@ -1,6 +1,3 @@
-scriptencoding utf-8 "Vim script内でマルチバイト文字を使う場合の設定
-runtime! util/*.vim
-
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -44,6 +41,7 @@ autocmd VimEnter * execute 'NERDTree'
 set helplang=ja
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
-syntax on
 colorscheme molokai
 set t_Co=256
+
+runtime! util/*.vim
