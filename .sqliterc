@@ -1,0 +1,6 @@
+.mode column
+.headers on
+.width 0
+.timer on
+.nullvalue "NULL"
+.prompt "sqlite>>>"
