@@ -18,3 +18,8 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 alias ll='ls -alF'
+
+#インプットメソッドの設定
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
