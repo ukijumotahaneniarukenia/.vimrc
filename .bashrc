@@ -23,4 +23,4 @@ alias ll='ls -alF'
 export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
-fcitx 1>＄HOME/launch-fcitx.log 2>&1 &
+fcitx 1>$HOME/launch-fcitx.log 2>&1 &
