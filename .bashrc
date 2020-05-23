@@ -34,13 +34,12 @@ else
 fi
 
 #Gitブランチを表示
-if [ -f git-prompt.sh ];then
+if [ -f $HOME/git-prompt.sh ];then
   :
 else
-  curl -sSLO https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+  curl -o $HOME/git-prompt.sh -sSL https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+  mv $HOME/git-prompt.sh $HOME/.git-prompt.sh
 fi
-
-mv git-prompt.sh .git-prompt.sh
 
 source $HOME/.git-prompt.sh
 
