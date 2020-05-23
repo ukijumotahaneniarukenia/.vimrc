@@ -20,13 +20,15 @@ alias grep='grep --color=auto'
 alias ll='ls -alF'
 
 #インプットメソッドの設定
-#export GTK_IM_MODULE=fcitx
-#export XMODIFIERS=@im=fcitx
-#export QT_IM_MODULE=fcitx
 
-#TODO ubuntuはfcitxでcentosはibusのロジックを組む 引数に環境ディレクトリを受け取る めんど
+OS_NAME=$(cat /etc/os-release | grep ID | head -n1 | xargs | sed -r 's/.+=//')
 
-#こっちがいい
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+if [ $OS_NAME = "ubuntu" ];then
+  export GTK_IM_MODULE=fcitx
+  export XMODIFIERS=@im=fcitx
+  export QT_IM_MODULE=fcitx
+else
+  export GTK_IM_MODULE=ibus
+  export XMODIFIERS=@im=ibus
+  export QT_IM_MODULE=ibus
+fi
