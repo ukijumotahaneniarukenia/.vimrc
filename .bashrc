@@ -20,6 +20,11 @@ alias grep='grep --color=auto'
 alias ll='ls -alF'
 
 #インプットメソッドの設定
-export GTK_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export QT_IM_MODULE=fcitx
+#export GTK_IM_MODULE=fcitx
+#export XMODIFIERS=@im=fcitx
+#export QT_IM_MODULE=fcitx
+
+#こっちがいい
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
