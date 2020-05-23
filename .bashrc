@@ -9,6 +9,10 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+
+#ディレクトリの色などをユーザー個別設定に適用
+eval `dircolors $HOME/.colorrc`
+
 PS1="\[\e[1;36m\]\u\[\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[1;35m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
 export LANG=ja_JP.utf8
 HISTSIZE=1000000
