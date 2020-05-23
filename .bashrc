@@ -24,6 +24,8 @@ alias ll='ls -alF'
 #export XMODIFIERS=@im=fcitx
 #export QT_IM_MODULE=fcitx
 
+#TODO ubuntuはfcitxでcentosはibusのロジックを組む 引数に環境ディレクトリを受け取る めんど
+
 #こっちがいい
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
