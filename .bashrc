@@ -43,4 +43,14 @@ fi
 mv git-prompt.sh .git-prompt.sh
 
 source $HOME/.git-prompt.sh
+
+#POWERLINEフォントを適用
+POWERLINE_FONT_FILE_NAME=$(ls $HOME/.fonts/Menlo* 2>/dev/null)
+
+if [ -z $POWERLINE_FONT_FILE_NAME ];then
+  bash /usr/local/src/script-repo/centos-7-6-18-10-config-font-Menlo_for_Powerline.sh
+else
+  :
+fi
+
 export PS1='\[\e[30;47m\] \t \[\e[37;46m\]\[\e[30m\] $(__git_ps1) \[\e[36;49m\]\[\e[0m\] '
