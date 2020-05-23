@@ -32,3 +32,15 @@ else
   export XMODIFIERS=@im=ibus
   export QT_IM_MODULE=ibus
 fi
+
+#Gitブランチを表示
+if [ -f git-prompt.sh ];then
+  :
+else
+  curl -sSLO https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+fi
+
+mv git-prompt.sh .git-prompt.sh
+
+source $HOME/.git-prompt.sh
+export PS1='\[\e[30;47m\] \t \[\e[37;46m\]\[\e[30m\] $(__git_ps1) \[\e[36;49m\]\[\e[0m\] '
