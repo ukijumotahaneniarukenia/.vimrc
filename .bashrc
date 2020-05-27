@@ -23,7 +23,7 @@ HISTFILESIZE=2000
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-alias ll='ls -alF'
+alias ll='ls -alhF'
 
 #インプットメソッドの設定
 
