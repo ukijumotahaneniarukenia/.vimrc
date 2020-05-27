@@ -6,6 +6,12 @@
 # The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
 # slackware version of dircolors) are recognized but ignored.
 # Below, there should be one TERM entry for each termtype that is colorizable
+
+
+#参考色
+#http://misc.flogisoft.com/bash/tip_colors_and_formatting
+
+
 TERM Eterm
 TERM ansi
 TERM color-xterm
