@@ -10,7 +10,13 @@
 
 #参考色
 #http://misc.flogisoft.com/bash/tip_colors_and_formatting
-.md 38;5;198
+.md 38;5;174
+.csv 38;5;157
+.tsv 38;5;186
+.txt 38;5;108
+.log 38;5;188
+.done 38;5;229
+
 
 TERM Eterm
 TERM ansi
