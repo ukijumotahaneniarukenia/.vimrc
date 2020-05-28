@@ -25,6 +25,12 @@ alias grep='grep --color=auto'
 
 alias ll='ls -alhF'
 
+#クリップボードへのコピー
+alias pbcopy='xsel --clipboard --input'
+
+#クリップボードからペースト
+alias pbpaste='xsel --clipboard --output'
+
 #インプットメソッドの設定
 
 OS_NAME=$(cat /etc/os-release | grep ID | head -n1 | xargs | sed -r 's/.+=//')
