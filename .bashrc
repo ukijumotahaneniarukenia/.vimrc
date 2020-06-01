@@ -65,3 +65,15 @@ else
 fi
 
 export PS1='\[\e[38;5;229m\]\H \[\e[0m\]\[\e[38;5;192m\](\u) \[\e[0m\]\[\e[30;2;47m\] \t \[\e[0m\]\[\e[33;7;47m\]\[\e[0m\]\[\e[30;2;43m\] \W $(__git_ps1) \[\e[0m\]\[\e[30;7;43m\]\[\e[0m\] '
+
+
+
+
+function tovim(){
+#Usage
+#seq 10 | xargs -n3 | tovim
+  TMP=tmp-$$
+  cat - >$TMP
+  vim $TMP </dev/tty # 今使っている端末からの標準入力を読み込む
+  rm -rf $TMP
+}
