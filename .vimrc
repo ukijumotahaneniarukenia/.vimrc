@@ -16,12 +16,40 @@ Plug 'suan/vim-instant-markdown'
 call plug#end()
 
 
+"python拡張
+"https://qiita.com/kouichi_c/items/5f047ab3a7c64277e97c
 if executable('pyls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'pyls',
         \ 'cmd': {server_info->['pyls']},
         \ 'whitelist': ['python'],
         \ })
+endif
+
+"go拡張
+"https://mattn.kaoriya.net/software/lang/c/20191112100330.htm
+if executable('gopls')
+  augroup LspGo
+    au!
+    autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'go-lang',
+        \ 'cmd': {server_info->['gopls']},
+        \ 'whitelist': ['go'],
+        \ 'workspace_config': {'gopls': {
+        \     'staticcheck': v:true,
+        \     'completeUnimported': v:true,
+        \     'caseSensitiveCompletion': v:true,
+        \     'usePlaceholders': v:true,
+        \     'completionDocumentation': v:true,
+        \     'watchFileChanges': v:true,
+        \     'hoverKind': 'SingleLine',
+        \   }},
+        \ })
+    autocmd FileType go setlocal omnifunc=lsp#complete
+    autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+    autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+    autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+  augroup END
 endif
 
 
