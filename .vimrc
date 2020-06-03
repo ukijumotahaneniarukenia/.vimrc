@@ -1,8 +1,6 @@
 call plug#begin()
 
-Plug 'scrooloose/nerdtree'
 Plug 'vim-jp/vimdoc-ja'
-Plug 'vim-scripts/Align'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-fugitive'
@@ -52,6 +50,11 @@ if executable('gopls')
   augroup END
 endif
 
+"vim拡張
+let g:markdown_fenced_languages = [
+      \ 'vim',
+      \ 'help'
+      \]
 
 set helplang=ja
 
