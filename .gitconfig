@@ -1,3 +1,6 @@
 [user]
 	email = mrchildrenkh1008@gmail.com
 	name = ukijumotahaneniarukenia
+[core] #日本語の8進数表記を文字に変換する http://www-creators.com/archives/78
+  pager = less -cm
+  quotepath = false
