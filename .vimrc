@@ -11,7 +11,16 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mattn/vim-lsp-settings'
 Plug 'suan/vim-instant-markdown'
 
+"swift用
+"https://github.com/neoclide/coc.nvim
+"https://qiita.com/AK-10/items/975b2b2d036ef9126e9b#cocnvim%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'keith/swift.vim'
+
 call plug#end()
+
+"swiftの警告抑止
+let g:coc_disable_startup_warning = 1
 
 
 "python拡張
