@@ -50,6 +50,24 @@ if executable('gopls')
   augroup END
 endif
 
+"clangd拡張
+"https://qiita.com/Quramy/items/bccf7b19919679541484
+"事前にapt install -y clangdをインストールしておくこと
+if executable('clangd')
+  augroup LspClangd
+    au!
+    autocmd User lsp_setup call lsp#register_server({
+    \ 'name': 'clangd',
+    \ 'cmd': {server_info->['clangd']},
+    \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+    \ })
+    autocmd FileType c setlocal omnifunc=lsp#complete
+    autocmd FileType c nmap <buffer> gd <plug>(lsp-definition)
+    autocmd FileType c nmap <buffer> ,n <plug>(lsp-next-error)
+    autocmd FileType c nmap <buffer> ,p <plug>(lsp-previous-error)
+  augroup END
+endif
+
 "vim拡張
 let g:markdown_fenced_languages = [
       \ 'vim',
