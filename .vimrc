@@ -93,6 +93,25 @@ if executable('vim-language-server')
   augroup END
 endif
 
+
+"ruby拡張
+if executable('solargraph')
+  augroup LspGo
+    au!
+    " gem install solargraph
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'solargraph',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
+        \ 'initialization_options': {"diagnostics": "true"},
+        \ 'whitelist': ['ruby','rb'],
+        \ })
+    autocmd FileType ruby setlocal omnifunc=lsp#complete
+    autocmd FileType ruby nmap <buffer> gd <plug>(lsp-definition)
+    autocmd FileType ruby nmap <buffer> ,n <plug>(lsp-next-error)
+    autocmd FileType ruby nmap <buffer> ,p <plug>(lsp-previous-error)
+  augroup END
+endif
+
 set helplang=ja
 
 colorscheme molokai
