@@ -95,6 +95,7 @@ endif
 
 
 "ruby拡張
+"https://github.com/prabirshrestha/vim-lsp/wiki/Servers-Ruby
 if executable('solargraph')
   augroup LspGo
     au!
