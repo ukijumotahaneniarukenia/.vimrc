@@ -78,10 +78,20 @@ if executable('clangd')
 endif
 
 "vim拡張
-let g:markdown_fenced_languages = [
-      \ 'vim',
-      \ 'help'
-      \]
+"https://github.com/prabirshrestha/vim-lsp/wiki/Servers-Vim
+if executable('vim-language-server')
+  augroup LspVim
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'vim-language-server',
+        \ 'cmd': {server_info->['vim-language-server', '--stdio']},
+        \ 'whitelist': ['vim'],
+        \ 'initialization_options': {
+        \   'vimruntime': $VIMRUNTIME,
+        \   'runtimepath': &rtp,
+        \ }})
+  augroup END
+endif
 
 set helplang=ja
 
