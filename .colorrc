@@ -10,43 +10,98 @@
 
 #参考色
 #http://misc.flogisoft.com/bash/tip_colors_and_formatting
-.md 38;5;208
 
-.csv 38;5;183
-.tsv 38;5;184
-.json 38;5;185
-.xml 38;5;186
-.dat 38;5;187
+#ドキュメント
+.md 38;5;223
 
-.pdf 38;5;226
+#構造データ
+.csv 38;5;148
+.tsv 38;5;148
+.json 38;5;148
+.xml 38;5;148
+.html 38;5;148
+.dat 38;5;148
+.pdf 38;5;148
+.txt 38;5;148
+.log 38;5;148
+.ipynb 38;5;148
+
+#非構造データ
+#sed -n '/image formats/,//p' ~/.colorrc | ruby -anle 'puts /^#+$/ =~ $F[0] ? $F.join(" ") : $F[0]+" 38;5;117"' | sed 's/^#//'
+# image formats
+.jpg 38;5;117
+.jpeg 38;5;117
+.gif 38;5;117
+.bmp 38;5;117
+.pbm 38;5;117
+.pgm 38;5;117
+.ppm 38;5;117
+.tga 38;5;117
+.xbm 38;5;117
+.xpm 38;5;117
+.tif 38;5;117
+.tiff 38;5;117
+.png 38;5;117
+.svg 38;5;117
+.svgz 38;5;117
+.mng 38;5;117
+.pcx 38;5;117
+.mov 38;5;117
+.mpg 38;5;117
+.mpeg 38;5;117
+.m2v 38;5;117
+.mkv 38;5;117
+.webm 38;5;117
+.ogm 38;5;117
+.mp4 38;5;117
+.m4v 38;5;117
+.mp4v 38;5;117
+.vob 38;5;117
+.qt 38;5;117
+.nuv 38;5;117
+.wmv 38;5;117
+.asf 38;5;117
+.rm 38;5;117
+.rmvb 38;5;117
+.flc 38;5;117
+.avi 38;5;117
+.fli 38;5;117
+.flv 38;5;117
+.gl 38;5;117
+.dl 38;5;117
+.xcf 38;5;117
+.xwd 38;5;117
+.yuv 38;5;117
+.cgm 38;5;117
+.emf 38;5;117
+# http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
+.axv 38;5;117
+.anx 38;5;117
+.ogv 38;5;117
+.ogx 38;5;117
+# audio formats
+.aac 38;5;117
+.au 38;5;117
+.flac 38;5;117
+.mid 38;5;117
+.midi 38;5;117
+.mka 38;5;117
+.mp3 38;5;117
+.mpc 38;5;117
+.ogg 38;5;117
+.ra 38;5;117
+.wav 38;5;117
+# http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
+.axa 38;5;117
+.oga 38;5;117
+.spx 38;5;117
+.xspf 38;5;117
 
 
-.txt 38;5;195
-.log 38;5;188
-
-.MD 38;5;208
-
-.CSV 38;5;183
-.TSV 38;5;184
-.JSON 38;5;185
-.XML 38;5;186
-.DAT 38;5;187
-
-.PDF 38;5;226
-
-
-.TXT 38;5;195
-.LOG 38;5;188
-
-
-
-#EXEC 38;5;85
-EXEC 38;5;158
-
+EXEC 38;5;85
 
 FIFO 38;5;191 # pipe
 SOCK 38;5;142 # socket
-
 
 LINK 38;5;123
 
@@ -161,7 +216,7 @@ STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 # executable bit actually set.
 #.sh 01;32
 #.csh 01;32
- # archives or compressed (bright red)
+# archives or compressed (bright red)
 .tar 01;31
 .tgz 01;31
 .arc 01;31
@@ -203,71 +258,71 @@ STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 .7z 01;31
 .rz 01;31
 .cab 01;31
-# image formats
-.jpg 01;35
-.jpeg 01;35
-.gif 01;35
-.bmp 01;35
-.pbm 01;35
-.pgm 01;35
-.ppm 01;35
-.tga 01;35
-.xbm 01;35
-.xpm 01;35
-.tif 01;35
-.tiff 01;35
-.png 01;35
-.svg 01;35
-.svgz 01;35
-.mng 01;35
-.pcx 01;35
-.mov 01;35
-.mpg 01;35
-.mpeg 01;35
-.m2v 01;35
-.mkv 01;35
-.webm 01;35
-.ogm 01;35
-.mp4 01;35
-.m4v 01;35
-.mp4v 01;35
-.vob 01;35
-.qt 01;35
-.nuv 01;35
-.wmv 01;35
-.asf 01;35
-.rm 01;35
-.rmvb 01;35
-.flc 01;35
-.avi 01;35
-.fli 01;35
-.flv 01;35
-.gl 01;35
-.dl 01;35
-.xcf 01;35
-.xwd 01;35
-.yuv 01;35
-.cgm 01;35
-.emf 01;35
-# http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axv 01;35
-.anx 01;35
-.ogv 01;35
-.ogx 01;35
-# audio formats
-.aac 00;36
-.au 00;36
-.flac 00;36
-.mid 00;36
-.midi 00;36
-.mka 00;36
-.mp3 00;36
-.mpc 00;36
-.ogg 00;36
-.ra 00;36
-.wav 00;36
-# http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axa 00;36
-.oga 00;36
-.spx 00;36
-.xspf 00;36
+## image formats
+#.jpg 01;35
+#.jpeg 01;35
+#.gif 01;35
+#.bmp 01;35
+#.pbm 01;35
+#.pgm 01;35
+#.ppm 01;35
+#.tga 01;35
+#.xbm 01;35
+#.xpm 01;35
+#.tif 01;35
+#.tiff 01;35
+#.png 01;35
+#.svg 01;35
+#.svgz 01;35
+#.mng 01;35
+#.pcx 01;35
+#.mov 01;35
+#.mpg 01;35
+#.mpeg 01;35
+#.m2v 01;35
+#.mkv 01;35
+#.webm 01;35
+#.ogm 01;35
+#.mp4 01;35
+#.m4v 01;35
+#.mp4v 01;35
+#.vob 01;35
+#.qt 01;35
+#.nuv 01;35
+#.wmv 01;35
+#.asf 01;35
+#.rm 01;35
+#.rmvb 01;35
+#.flc 01;35
+#.avi 01;35
+#.fli 01;35
+#.flv 01;35
+#.gl 01;35
+#.dl 01;35
+#.xcf 01;35
+#.xwd 01;35
+#.yuv 01;35
+#.cgm 01;35
+#.emf 01;35
+## http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
+#.axv 01;35
+#.anx 01;35
+#.ogv 01;35
+#.ogx 01;35
+## audio formats
+#.aac 00;36
+#.au 00;36
+#.flac 00;36
+#.mid 00;36
+#.midi 00;36
+#.mka 00;36
+#.mp3 00;36
+#.mpc 00;36
+#.ogg 00;36
+#.ra 00;36
+#.wav 00;36
+## http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
+#.axa 00;36
+#.oga 00;36
+#.spx 00;36
+#.xspf 00;36
