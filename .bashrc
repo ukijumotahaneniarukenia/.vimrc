@@ -15,12 +15,25 @@ export SHELL=$(which bash)
 
 eval `dircolors $HOME/.colorrc`
 
-PS1="\[\e[1;36m\]\u\[\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[1;35m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+
+uid=$(id | grep -oP uid=[0-9]+ | sed -r 's/.+=([0-9]+)/\1/')
+
+if [ $uid -eq 0 ];then
+  #rootユーザー
+  PS1="\[\e[38;5;200m\]\u\[\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+else
+  #non-rootユーザー
+  PS1="\[\e[38;5;44m\]\u\[\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+fi
+
+
+
+
 export LANG=ja_JP.utf8
 HISTSIZE=1000000
 HISTFILESIZE=2000
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto -F'
 alias grep='grep --color=auto'
 
 alias ll='ls -alhF'
@@ -45,7 +58,6 @@ else
   export QT_IM_MODULE=ibus
 fi
 
-#あきたので、やめ
 #Gitブランチを表示
 #if [ -f $HOME/git-prompt.sh ];then
 #  :
@@ -66,7 +78,7 @@ fi
 #fi
 #
 #export PS1='\[\e[38;5;229m\]\H \[\e[0m\]\[\e[38;5;192m\](\u) \[\e[0m\]\[\e[30;2;47m\] \t \[\e[0m\]\[\e[33;7;47m\]\[\e[0m\]\[\e[30;2;43m\] \W $(__git_ps1) \[\e[0m\]\[\e[30;7;43m\]\[\e[0m\] '
-
+#
 
 
 
