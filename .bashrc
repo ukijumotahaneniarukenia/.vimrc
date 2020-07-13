@@ -45,26 +45,27 @@ else
   export QT_IM_MODULE=ibus
 fi
 
+#あきたので、やめ
 #Gitブランチを表示
-if [ -f $HOME/git-prompt.sh ];then
-  :
-else
-  curl -o $HOME/git-prompt.sh -sSL https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-  mv $HOME/git-prompt.sh $HOME/.git-prompt.sh
-fi
+#if [ -f $HOME/git-prompt.sh ];then
+#  :
+#else
+#  curl -o $HOME/git-prompt.sh -sSL https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+#  mv $HOME/git-prompt.sh $HOME/.git-prompt.sh
+#fi
 
-source $HOME/.git-prompt.sh
-
-#POWERLINEフォントを適用
-POWERLINE_FONT_FILE_NAME=$(ls $HOME/.fonts/Menlo* 2>/dev/null)
-
-if [ -z $POWERLINE_FONT_FILE_NAME ];then
-  bash /usr/local/src/script-repo/centos-7-6-18-10-config-font-Menlo_for_Powerline.sh
-else
-  :
-fi
-
-export PS1='\[\e[38;5;229m\]\H \[\e[0m\]\[\e[38;5;192m\](\u) \[\e[0m\]\[\e[30;2;47m\] \t \[\e[0m\]\[\e[33;7;47m\]\[\e[0m\]\[\e[30;2;43m\] \W $(__git_ps1) \[\e[0m\]\[\e[30;7;43m\]\[\e[0m\] '
+#source $HOME/.git-prompt.sh
+#
+##POWERLINEフォントを適用
+#POWERLINE_FONT_FILE_NAME=$(ls $HOME/.fonts/Menlo* 2>/dev/null)
+#
+#if [ -z $POWERLINE_FONT_FILE_NAME ];then
+#  bash /usr/local/src/script-repo/centos-7-6-18-10-config-font-Menlo_for_Powerline.sh
+#else
+#  :
+#fi
+#
+#export PS1='\[\e[38;5;229m\]\H \[\e[0m\]\[\e[38;5;192m\](\u) \[\e[0m\]\[\e[30;2;47m\] \t \[\e[0m\]\[\e[33;7;47m\]\[\e[0m\]\[\e[30;2;43m\] \W $(__git_ps1) \[\e[0m\]\[\e[30;7;43m\]\[\e[0m\] '
 
 
 
