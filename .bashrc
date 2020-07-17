@@ -23,7 +23,7 @@ if [ $uid -eq 0 ];then
   PS1="\[\e[38;5;200m\]\u\[\e[m\] \[\e[38;5;73m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
 else
   #non-rootユーザー
-  PS1="\[\e[38;5;44m\]\u\[\e[m\] \[\e[38;5;73m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+  PS1="\[\e[38;5;44m\]\u\[\e[m\] \[\e[38;5;200m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
 fi
 
 #改行をプロンプトの前に入れる
