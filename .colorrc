@@ -11,6 +11,9 @@
 #参考色
 #http://misc.flogisoft.com/bash/tip_colors_and_formatting
 
+#環境ファイル
+.env 38;5;148
+
 #ドキュメント
 .md 38;5;223
 
