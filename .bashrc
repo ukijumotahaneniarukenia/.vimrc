@@ -33,10 +33,10 @@ export LANG=ja_JP.utf8
 HISTSIZE=1000000
 HISTFILESIZE=2000
 
-alias ls='ls --color=auto -F'
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-alias ll='ls -alhF'
+alias ll='ls -alh'
 
 #クリップボードへのコピー
 alias pbcopy='xsel --clipboard --input'
