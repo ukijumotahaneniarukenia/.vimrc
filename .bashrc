@@ -5,6 +5,9 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+#使用するログインシェルの設定
+export SHELL=$(which bash)
+
 #ディレクトリの色などをユーザー個別設定に適用
 eval `dircolors $HOME/.colorrc`
 
