@@ -31,7 +31,7 @@ alias pbpaste='xsel --clipboard --output' #クリップボードからペース�
 
 #エイリアス-ベンダー
 alias idea="/usr/local/src/idea-IC-202.6397.94/bin/idea.sh >$HOME/launch-idea.log 2>&1 &"
-alias pyc="bash /usr/local/src/pycharm-community-2020.2/bin/pycharm.sh 1>$HOME/launch-pycharm.log 2>&1 &"
+alias pyc="bash /usr/local/src/pycharm-community-2020.2.1/bin/pycharm.sh 1>$HOME/launch-pycharm.log 2>&1 &"
 alias myb="mysql-workbench 1>$HOME/launch-mysql-bench.log 2>&1 &"
 alias qtd="( mkdir -p $HOME/qt-wrksp && export XDG_RUNTIME_DIR=$HOME/qt-wrksp && cd /usr/lib/x86_64-linux-gnu/qt5/bin && ./designer 1>$HOME/launch-qt-designer.log 2>&1 </dev/null & )"
 alias and="studio.sh 1>$HOME/launch-android-studio.log 2>&1 &"
