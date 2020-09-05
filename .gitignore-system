@@ -2,6 +2,9 @@
 #便利
 #実行ユーザー単位で、レポジトリをまたいで除外対象を定義できる
 
+#jupyter_notebook
+.ipynb_checkpoints
+
 #dotnet系のdbファイル
 .ionide
 
