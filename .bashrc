@@ -19,7 +19,7 @@ else
   if [ "$(whoami)" == "aine" ];then
     PS1="\[\e[38;5;44m\]\u\[\e[m\] \[\e[38;5;228m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
   else
-    PS1="\[\e[38;5;42m\]\u\[\e[m\] \[\e[38;5;228m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+    PS1="\[\e[38;5;195m\]\u\[\e[m\] \[\e[38;5;228m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
   fi
 fi
 
