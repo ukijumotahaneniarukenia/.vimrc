@@ -24,10 +24,10 @@ else
   #systemd_nspawnコンテナ以外
   if [[ $(id $USER -u) -eq 0 ]];then
     #rootユーザー
-    PS1="\[\e[38;5;228m\]\u\[\e[m\] \[\e[38;5;44m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]$(ip a show | grep -Po '([0-9]+.){3}(.[0-9]+)'|grep 192.168.1|grep -v 255)\[\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+    PS1="\[\e[38;5;228m\]\u\[\e[m\] \[\e[38;5;44m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]$(ip a show | grep -Po '([0-9]+.){3}(.[0-9]+)'|grep -P '192.168.1(?=\.)'|grep -v 255)\[\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
   else
     #non-rootユーザー
-    PS1="\[\e[38;5;44m\]\u\[\e[m\] \[\e[38;5;228m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]$(ip a show | grep -Po '([0-9]+.){3}(.[0-9]+)'|grep 192.168.1|grep -v 255)\[\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+    PS1="\[\e[38;5;44m\]\u\[\e[m\] \[\e[38;5;228m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]$(ip a show | grep -Po '([0-9]+.){3}(.[0-9]+)'|grep -P '192.168.1(?=\.)'|grep -v 255)\[\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
   fi
 fi
 
