@@ -15,19 +15,19 @@ if [ -f /usr/local/src/systemd_nspawn.env ];then
   #systemd_nspawnコンテナ
   if [[ $(id $USER -u) -eq 0 ]];then
     #rootユーザー
-    PS1="\[\e[38;5;118m\]\u\[\e[m\] \[\e[38;5;195m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]$MACHINE_IP\[\e[m\] \[\e[1;37m\]$MACHINE_NAME\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+    PS1="\[\e[38;5;118m\]\u\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
   else
     #non-rootユーザー
-    PS1="\[\e[38;5;195m\]\u\[\e[m\] \[\e[38;5;118m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]$MACHINE_IP\[\e[m\] \[\e[1;37m\]$MACHINE_NAME\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+    PS1="\[\e[38;5;195m\]\u\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
   fi
 else
   #systemd_nspawnコンテナ以外
   if [[ $(id $USER -u) -eq 0 ]];then
     #rootユーザー
-    PS1="\[\e[38;5;228m\]\u\[\e[m\] \[\e[38;5;44m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]$(ip a show | grep -Po '([0-9]+.){3}(.[0-9]+)'|grep -P '192.168.1(?=\.)'|grep -v 255)\[\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+    PS1="\[\e[38;5;228m\]\u\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
   else
     #non-rootユーザー
-    PS1="\[\e[38;5;44m\]\u\[\e[m\] \[\e[38;5;228m\]ukijumotahaneniarukenia\e[m\] \[\e[1;37m\]$(ip a show | grep -Po '([0-9]+.){3}(.[0-9]+)'|grep -P '192.168.1(?=\.)'|grep -v 255)\[\e[m\] \[\e[1;37m\]\H\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
+    PS1="\[\e[38;5;44m\]\u\[\e[m\] \[\e[38;5;213m\]\t\[\e[m\] \[\e[38;5;157m\]\w\[\e[m\]\[\e[1;33m\]$\[\e[m\]"
   fi
 fi
 
@@ -52,10 +52,6 @@ alias eclipse="$HOME/eclipse/rust-2020-03/eclipse/eclipse 1>$HOME/launch-eclipse
 
 #エイリアス-マイセルフ
 alias repo="cd /usr/local/src/script-repo"
-alias sskc="cd $HOME/script-sketch"
-alias senv="cd $HOME/script-env"
-alias scmd="cd $HOME/script-cmd"
-alias sapi="cd $HOME/script-api"
 
 #ファンクション-マイセルフ
 function tovim(){
