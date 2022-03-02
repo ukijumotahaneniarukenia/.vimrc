@@ -35,30 +35,8 @@ fi
 #改行をプロンプトの前に入れる
 PS1=$PS1"\n\[\e[1;33m\]$ \[\e[m\]"
 
-#エイリアス-ネイティブ
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -alh'
 alias pbcopy='xsel --clipboard --input' #クリップボードへのコピー
 alias pbpaste='xsel --clipboard --output' #クリップボードからペースト
-
-#エイリアス-ベンダー
-alias idea="/usr/local/src/idea-IC-202.6397.94/bin/idea.sh 1>$HOME/launch-idea.log 2>&1 &"
-alias pyc="bash /usr/local/src/pycharm-community-2020.2.1/bin/pycharm.sh 1>$HOME/launch-pycharm.log 2>&1 &"
-alias myb="mysql-workbench 1>$HOME/launch-mysql-bench.log 2>&1 &"
-alias qtd="$HOME/anaconda3/bin/designer 1>$HOME/launch-qt_designer.log 2>&1 &"
-alias and="studio.sh 1>$HOME/launch-android-studio.log 2>&1 &"
-alias eclipse="$HOME/eclipse/rust-2020-03/eclipse/eclipse 1>$HOME/launch-eclipse.log 2>&1 &"
-
-#エイリアス-マイセルフ
-alias repo="cd /usr/local/src/script-repo"
-
-#ファンクション-マイセルフ
-function tovim(){
-#Usage
-#seq 10 | xargs -n3 | tovim
-  TMP=tmp-$$
-  cat - >$TMP
-  vim $TMP </dev/tty # 今使っている端末からの標準入力を読み込む
-  rm -rf $TMP
-}
